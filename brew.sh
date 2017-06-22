@@ -1,6 +1,10 @@
 #!/bin/bash
 
 brew install git
+brew install zsh zsh-completions
+brew install zsh-syntax-highlighting
+brew install z
+brew install node
 
 brew cask install google-chrome
 brew cask install docker
