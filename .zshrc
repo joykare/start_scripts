@@ -1,13 +1,18 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Android SDK
+export ANDROID_HOME=/usr/local/share/android-sdk
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/build-tools/23.0.1:$PATH
+
+
+# Add ruby shims to path
+export PATH=$HOME/.rbenv/shims:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/joykare/.oh-my-zsh
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -56,6 +61,10 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="random"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -97,3 +106,19 @@ export REACTION_EMAIL="warugujoy@gmail.com"
 
 # Increase file limit to allow for Meteor dev env
 ulimit -n 65536 65536
+
+# AWS env variables
+export AWS_PROFILE="sandbox"
+export AWS_ENVIRONMENT="sandbox"
+export AWS_REGION="us-east-1"
+
+function aws_profile() { export AWS_PROFILE="$1"; }
+
+eval "$(rbenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source ~/.assume.sh
+
