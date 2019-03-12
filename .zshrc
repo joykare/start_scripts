@@ -90,11 +90,12 @@ ZSH_THEME="random"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
 
 # Syntax-highlighting
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Navigation simplifier
 . `brew --prefix`/etc/profile.d/z.sh

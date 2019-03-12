@@ -19,6 +19,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # Set-up zsh-syntax-highlighting
 cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
+# Set up zsh-autosuggestions
+cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-autosuggestions
+
 # Install npm packages
 ./npm.sh
 
