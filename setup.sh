@@ -16,6 +16,9 @@ echo "*********** Copied ssh key paste on github ***********"
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Set zsh as default shell
+chsh -s /usr/local/bin/zsh
+
 # Set-up zsh-syntax-highlighting
 cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
@@ -26,11 +29,11 @@ cd ~/.oh-my-zsh && git clone git://github.com/zsh-users/zsh-autosuggestions
 ./npm.sh
 
 # Increase file limit to allow for Meteor dev env
-echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
-echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
-sudo sysctl -w kern.maxfiles=65536
-sudo sysctl -w kern.maxfilesperproc=65536
-ulimit -n 65536 65536
+# echo kern.maxfiles=65536 | sudo tee -a /etc/sysctl.conf
+# echo kern.maxfilesperproc=65536 | sudo tee -a /etc/sysctl.conf
+# sudo sysctl -w kern.maxfiles=65536
+# sudo sysctl -w kern.maxfilesperproc=65536
+# ulimit -n 65536 65536
 
 # Install meteor
-curl https://install.meteor.com/ | sh
+# curl https://install.meteor.com/ | sh
